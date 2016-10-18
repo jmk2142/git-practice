@@ -12,7 +12,7 @@ getCoffee(1);
 
 // calculateScore Function
 function calculateScore(base, extra) {
-  console.log(base + extra);
+  return base + extra;
 }
 console.log(calculateScore(3, 4));
 
