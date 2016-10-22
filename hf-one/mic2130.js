@@ -3,9 +3,9 @@
 
 // Variables
 
-var toll1 = 4;
-var toll2 = 6;
-var toll3 = 5;
+var toll1 = 0;
+var toll2 = 0;
+var toll3 = 0;
 var tollTotal = toll1 + toll2 + toll3;
 
 var paved;
@@ -23,13 +23,18 @@ var seatbeltClick = true;
 
 // Functions
 
-function tollCost(toll1, toll2, toll3){
+function tollCost(toll1, toll2, toll3) {
+return tollTotal;
+  }
+
+function tollSignal(){
 if (tollTotal > 0) {
   console.log ("make sure you bring your wallet, you will need to pay " + tollTotal + "USD in tolls");
-} else {
+} if (tollTotal === 0) {
   console.log ("road free of tolls! let's buy a sandwich with your cash!");
 }
 }
+
 
 function roadType(roadType) {
 if (roadType == "paved") {
@@ -58,7 +63,7 @@ function carAutonomy(gasoline, distance){
 }
 }
 
-function seatbeltCheck(seatbeltClick) {
+function seatbeltCheck() {
 if (seatbeltClick === true) {
   console.log ("wau, that seatbelt looks great on you! safety is trendy");
 } else {
@@ -68,10 +73,11 @@ if (seatbeltClick === true) {
 
 // Calling the functions.
 
-console.log (tollCost(2, 7, 4));
+console.log (tollCost(2,3,3));
+console.log (tollSignal());
 console.log (roadType("dirty"));
 console.log (getTravelTime(180, 60));
 console.log (carAutonomy(300, 60));
-console.log (seatbeltChek(true));
+console.log (seatbeltChek());
 
 // It is possible to see that 3 functions are working and 2 no, for example the boolean seatbeltChek function is not working and neither the carAutonomy one.  I'm trying hard to figure out why. I guess I'm learning.
