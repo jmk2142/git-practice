@@ -71,6 +71,18 @@ if (seatbeltClick === true) {
 }
 }
 
+
+function getTravelTime(speed, distance) {
+  var travelTime = Math.floor(speed/distance);
+  var travelTimeMin = speed/distance*60;
+  if (travelTime > 0) {
+    console.log ('you will arrive in aprox ' + travelTime + 'hr to your destiny');
+  } else if (travelTime === 0) {
+  console.log ('you will arrive in aprox ' + travelTimeMin + 'min to your destiny');
+}
+}
+
+
 // Calling the functions.
 
 console.log (tollCost(2,3,3));
